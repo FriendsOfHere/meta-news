@@ -1,0 +1,12 @@
+{
+   "name": "Meta News",
+   "version": "1.0.0",
+   "identifier": "app.here.meta-news",
+   "description": "A plugin to generate news plugin",
+   "icon": "icon.png",
+   "createdBy": "Lifesign",
+   "website": "https://github.com/FriendsOfHere",
+   "script": "index.js",
+   "defaultCategory": "fav",
+   "displayOn": ["mini"] 
+}
