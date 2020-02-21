@@ -100,8 +100,8 @@ mv ${defaultDesktop}/${pluginIdentifier}.zip ${defaultDesktop}/${pluginIdentifie
 
                 })
             },
-            title: "正在生成插件,这里会是标题",
-            detail: "点击此处将生成插件，移动到 popup 可查看插件效果",
+            title: `👓生成标题预览->${topFeed.title}`,
+            detail: "点击此处将在桌面生成插件，移动到 popup 可查看插件效果",
             popOvers: _.map(feed.items, (item, index) => {
                 return {
                     title: `${index + 1}. ${item.title}`,
