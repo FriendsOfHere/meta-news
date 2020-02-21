@@ -15,31 +15,31 @@
           "title": "* Feed 地址(XML返回)",
           "type": "text",
           "key": "feedUrl",
-          "default": ""
+          "default": "https://rsshub.app/github/repos/FriendsOfHere"
       },
       {
           "title": "* 插件名",
           "type": "text",
           "key": "pluginName",
-          "default": ""
+          "default": "FriendsOfHere 最新项目"
       },
       {
           "title": "* 插件标识(identifier)",
           "type": "text",
           "key": "pluginIdentifier",
-          "default": "app.here.hello-world"
+          "default": "app.here.foh.hello-world"
       },
       {
           "title": "插件描述",
           "type": "text",
           "key": "pluginDescription",
-          "default": ""
+          "default": "FOH 最新项目"
       },
       {
           "title": "mini window 描述",
           "type": "text",
           "key": "miniDetail",
-          "default": ""
+          "default": "展示 FOH 最新项目"
       },
    ]
 }
