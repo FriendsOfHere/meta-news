@@ -21,6 +21,7 @@ function updateData() {
     let pluginIdentifier = ""
     let miniDetail = ""
     let pluginDescription = ""
+    let logoPath = ""
 
     here.setMiniWindow({ title: "Updating…" })
 
@@ -51,6 +52,7 @@ function updateData() {
     pluginIdentifier = prefs.pluginIdentifier
     pluginDescription = prefs.pluginDescription
     miniDetail = prefs.miniDetail
+    logoPath = prefs.logoPath
 
     here.parseRSSFeed(feedUrl)
     .then((feed) => {
@@ -89,6 +91,7 @@ function updateData() {
                 here.exec(`
 mkdir -p ${defaultDestDir};
 /bin/cp -rf ./template/* ${defaultDestDir};
+[ -f ${logoPath} ] && cp ${logoPath} ${defaultDestDir}/icon.png;
 perl -pi -e s,{{pluginName}},${pluginName},g ${defaultDestDir}/config.json;
 perl -pi -e s,{{pluginIdentifier}},${pluginIdentifier},g ${defaultDestDir}/config.json;
 perl -pi -e s,{{pluginDescription}},${pluginDescription},g ${defaultDestDir}/config.json;

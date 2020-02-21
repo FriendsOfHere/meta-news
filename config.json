@@ -41,5 +41,11 @@
           "key": "miniDetail",
           "default": "展示 FOH 最新项目"
       },
+      {
+          "title": "Logo 路径(icon.png)",
+          "type": "text",
+          "key": "logoPath",
+          "default": ""
+      },
    ]
 }
