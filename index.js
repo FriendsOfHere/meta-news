@@ -63,8 +63,8 @@ function updateData() {
         }
 
         const topFeed = feed.items[0]
-        const defaultDesktop = '~/Desktop'
-        const defaultDestDir = `~/Desktop/${pluginIdentifier}`
+        const defaultDesktop = '/Users/$(whoami)/Desktop'
+        const defaultDestDir = `/Users/$(whoami)/Desktop/${pluginIdentifier}`
         // Mini Window
         here.setMiniWindow({
             onClick: () => {
@@ -86,7 +86,7 @@ sed -i 's/{{pluginIdentifier}}/${pluginIdentifier}/g' ${defaultDestDir}/config.j
 sed -i 's/{{pluginDescription}}/${pluginDescription}/g' ${defaultDestDir}/config.json;
 sed -i 's|{{rssFeedUrl}}|${feedUrl}|g' ${defaultDestDir}/index.js;
 sed -i 's/{{miniDetail}}/${miniDetail}/g' ${defaultDestDir}/index.js;
-zip -rm ${defaultDesktop}/${pluginIdentifier}.zip ${defaultDestDir} -x *.DS_Store*;
+cd ${defaultDesktop} && zip -rm ${pluginIdentifier}.zip ${pluginIdentifier} -x *.DS_Store* && cd -;
 mv ${defaultDesktop}/${pluginIdentifier}.zip ${defaultDesktop}/${pluginIdentifier}.hereplugin;
 `)
                 .then((output) => {
