@@ -78,14 +78,22 @@ function updateData() {
                 `)
 
                 //cp template && replace && zip to .hereplugin
+                /**
+                 * replace origin sed version with perl, due to BSD、GNU version of sed on mac
+                 * sed -i '' 's/{{pluginName}}/${pluginName}/g' ${defaultDestDir}/config.json;
+                   sed -i '' 's/{{pluginIdentifier}}/${pluginIdentifier}/g' ${defaultDestDir}/config.json;
+                   sed -i '' 's/{{pluginDescription}}/${pluginDescription}/g' ${defaultDestDir}/config.json;
+                   sed -i '' 's|{{rssFeedUrl}}|${feedUrl}|g' ${defaultDestDir}/index.js;
+                   sed -i '' 's/{{miniDetail}}/${miniDetail}/g' ${defaultDestDir}/index.js;
+                 */
                 here.exec(`
 mkdir -p ${defaultDestDir};
 /bin/cp -rf ./template/* ${defaultDestDir};
-sed -i 's/{{pluginName}}/${pluginName}/g' ${defaultDestDir}/config.json;
-sed -i 's/{{pluginIdentifier}}/${pluginIdentifier}/g' ${defaultDestDir}/config.json;
-sed -i 's/{{pluginDescription}}/${pluginDescription}/g' ${defaultDestDir}/config.json;
-sed -i 's|{{rssFeedUrl}}|${feedUrl}|g' ${defaultDestDir}/index.js;
-sed -i 's/{{miniDetail}}/${miniDetail}/g' ${defaultDestDir}/index.js;
+perl -pi -e s,{{pluginName}},${pluginName},g ${defaultDestDir}/config.json;
+perl -pi -e s,{{pluginIdentifier}},${pluginIdentifier},g ${defaultDestDir}/config.json;
+perl -pi -e s,{{pluginDescription}},${pluginDescription},g ${defaultDestDir}/config.json;
+perl -pi -e s,{{rssFeedUrl}},${feedUrl},g ${defaultDestDir}/index.js;
+perl -pi -e s,{{miniDetail}},${miniDetail},g ${defaultDestDir}/index.js;
 cd ${defaultDesktop} && zip -rm ${pluginIdentifier}.zip ${pluginIdentifier} -x *.DS_Store* && cd -;
 mv ${defaultDesktop}/${pluginIdentifier}.zip ${defaultDesktop}/${pluginIdentifier}.hereplugin;
 `)
