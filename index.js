@@ -106,11 +106,11 @@ function updateData() {
 mkdir -p ${defaultDestDir};
 /bin/cp -rf ./template/* ${defaultDestDir};
 [ -f ${logoPath} ] && cp ${logoPath} ${defaultDestDir}/icon.png;
-perl -pi -e s,{{pluginName}},${pluginName},g ${defaultDestDir}/config.json;
-perl -pi -e s,{{pluginIdentifier}},${pluginIdentifier},g ${defaultDestDir}/config.json;
-perl -pi -e s,{{pluginDescription}},${pluginDescription},g ${defaultDestDir}/config.json;
-perl -pi -e s,{{rssFeedUrl}},${feedUrl},g ${defaultDestDir}/index.js;
-perl -pi -e s,{{miniDetail}},${miniDetail},g ${defaultDestDir}/index.js;
+perl -pi -e 's/{{pluginName}}/${pluginName}/g' ${defaultDestDir}/config.json;
+perl -pi -e 's/{{pluginIdentifier}}/${pluginIdentifier}/g' ${defaultDestDir}/config.json;
+perl -pi -e 's/{{pluginDescription}}/${pluginDescription}/g' ${defaultDestDir}/config.json;
+perl -pi -e 's|{{rssFeedUrl}}|${feedUrl}|g' ${defaultDestDir}/index.js;
+perl -pi -e 's/{{miniDetail}}/${miniDetail}/g' ${defaultDestDir}/index.js;
 cd ${defaultDesktop} && zip -rm ${pluginIdentifier}.zip ${pluginIdentifier} -x *.DS_Store* && cd -;
 mv ${defaultDesktop}/${pluginIdentifier}.zip ${defaultDesktop}/${pluginIdentifier}.hereplugin;
 `)
