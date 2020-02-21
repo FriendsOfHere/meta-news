@@ -8,5 +8,37 @@
    "website": "https://github.com/FriendsOfHere",
    "script": "index.js",
    "defaultCategory": "fav",
-   "displayOn": ["mini"] 
+   "displayOn": ["mini"],
+   "preferences": [
+      {
+          "title": "* Feed 地址(XML返回)",
+          "type": "text",
+          "key": "feedUrl",
+          "default": ""
+      },
+      {
+          "title": "* 插件名",
+          "type": "text",
+          "key": "pluginName",
+          "default": ""
+      },
+      {
+          "title": "* 插件标识(identifier)",
+          "type": "text",
+          "key": "pluginIdentifier",
+          "default": "app.here.hello-world"
+      },
+      {
+          "title": "插件描述",
+          "type": "text",
+          "key": "pluginDescription",
+          "default": ""
+      },
+      {
+          "title": "mini window 描述",
+          "type": "text",
+          "key": "miniDetail",
+          "default": ""
+      },
+   ]
 }
