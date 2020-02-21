@@ -67,6 +67,20 @@ function updateData() {
         const topFeed = feed.items[0]
         const defaultDesktop = '/Users/$(whoami)/Desktop'
         const defaultDestDir = `/Users/$(whoami)/Desktop/${pluginIdentifier}`
+
+        let popOvers = [
+            {title: "💖 欢迎关注 FriendsOfHere 🥰",
+            onClick: () => {here.openURL("https://github.com/FriendsOfHere")}},
+            {title: "以下是 FOH 正在维护的项目，欢迎 Star ⭐️",
+            onClick: () => {here.openURL("https://github.com/FriendsOfHere")}}
+        ]
+        popOvers = popOvers.concat(_.map(feed.items, (item, index) => {
+            return {
+                title: `${index + 1}. ${item.title}`,
+                onClick: () => { if (item.link != undefined)  { here.openURL(item.link) } }
+            }
+        }))
+
         // Mini Window
         here.setMiniWindow({
             onClick: () => {
@@ -113,12 +127,7 @@ mv ${defaultDesktop}/${pluginIdentifier}.zip ${defaultDesktop}/${pluginIdentifie
             },
             title: `👓生成标题预览->${topFeed.title}`,
             detail: "点击此处将在桌面生成插件，移动可查看 popup 效果",
-            popOvers: _.map(feed.items, (item, index) => {
-                return {
-                    title: `${index + 1}. ${item.title}`,
-                    onClick: () => { if (item.link != undefined)  { here.openURL(item.link) } }
-                }
-            })
+            popOvers: popOvers
         })
     })
     .catch((error) => {
