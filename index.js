@@ -92,7 +92,7 @@ mv ${defaultDesktop}/${pluginIdentifier}.zip ${defaultDesktop}/${pluginIdentifie
                 .then((output) => {
                     console.log(output)
                     //生成成功
-                    here.systemNotification(`${pluginName} 生成成功🤗`, `插件已生成至桌面，双击 ${identifier}.hereplugin 安装吧`)
+                    here.systemNotification(`${pluginName} 生成成功🤗`, `插件已生成至桌面，双击 ${pluginIdentifier}.hereplugin 安装吧`)
                     //打开到桌面
                     _.delay(() => {
                         here.exec('open ~/Desktop', (output) => {console.log(output)})
