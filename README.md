@@ -2,15 +2,24 @@
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
-A [Here](https://here.app) plugin. A plugin to generate news plugin
+> Tired of building news plugin 🙃? try Meta News, A plugin to generate [Here](https://here.app) news plugin at once.
 
-### Installation
+[中文说明](./readme_zh.md)
 
-Double-click `.hereplugin`
+## Installation
 
-### Updating
+### One Click  (Recommend)
+👉 <a href="https://jump.here.app/?installPlugin?title=sspai&url=https://github.com/FriendsOfHere/meta-news/releases/latest/download/app.here.meta-news.hereplugin">Click Here 🔌</a>
 
-Right click on the plugin to Check for Updates
+### Manually
+1. go [releases](https://github.com/FriendsOfHere/meta-news/releases/latest/) page
+2. download the latest release & double click the `app.here.meta-news.hereplugin`
+
+## Usage
+1. go Meta-News preferences
+2. You must fill the fileds with * prefix
+3. Click on the mini window
+4. Your news plugin will appear on the desktop
 
 ### License
 
