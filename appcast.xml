@@ -3,7 +3,9 @@
     xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
     <channel>
         <item>
-            <enclosure url="https://github.com/FriendsOfHere/sspai/releases/download/1.0.0/app.here.sspai.hereplugin" sparkle:version="1.0.0"/>
+            <enclosure url="https://github.com/FriendsOfHere/meta-news
+/releases/download/1.0.0/app.here.meta-news
+.hereplugin" sparkle:version="1.0.0"/>
         </item>
     </channel>
 </rss>
