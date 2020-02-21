@@ -1,5 +1,5 @@
 /*
- * This file is part of app.here.metanews.
+ * This file is part of app.here.meta-news.
  *
  * Copyright (c) 2020 Lifesign.
  *
@@ -69,7 +69,7 @@ function updateData() {
         here.setMiniWindow({
             onClick: () => {
                 console.log(`
-                    ======== Meta Config Pref =======
+                    ======== Meta Config =======
                     ==== FeedUrl: ${feedUrl} ====
                     ==== PluginName: ${pluginName} ====
                     ==== Identifier: ${pluginIdentifier} ====
@@ -99,9 +99,9 @@ mv ${defaultDesktop}/${pluginIdentifier}.zip ${defaultDesktop}/${pluginIdentifie
 `)
                 .then((output) => {
                     console.log(output)
-                    //生成成功
+                    //generate notification
                     here.systemNotification(`${pluginName} 生成成功🤗`, `插件已生成至桌面，双击 ${pluginIdentifier}.hereplugin 安装吧`)
-                    //打开到桌面
+                    //open desktop
                     _.delay(() => {
                         here.exec('open ~/Desktop', (output) => {console.log(output)})
                     }, 1000);
@@ -109,7 +109,7 @@ mv ${defaultDesktop}/${pluginIdentifier}.zip ${defaultDesktop}/${pluginIdentifie
                 })
             },
             title: `👓生成标题预览->${topFeed.title}`,
-            detail: "点击此处将在桌面生成插件，移动到 popup 可查看插件效果",
+            detail: "点击此处将在桌面生成插件，移动可查看 popup 效果",
             popOvers: _.map(feed.items, (item, index) => {
                 return {
                     title: `${index + 1}. ${item.title}`,
