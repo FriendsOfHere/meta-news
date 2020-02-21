@@ -9,7 +9,7 @@
 ## Installation
 
 ### One Click  (Recommend)
-👉 <a href="https://jump.here.app/?installPlugin?title=sspai&url=https://github.com/FriendsOfHere/meta-news/releases/latest/download/app.here.meta-news.hereplugin">Click Here 🔌</a>
+👉 <a href="https://jump.here.app/?installPlugin?title=meta-news&url=https://github.com/FriendsOfHere/meta-news/releases/latest/download/app.here.meta-news.hereplugin">Click Here 🔌</a>
 
 ### Manually
 1. Go [releases](https://github.com/FriendsOfHere/meta-news/releases/latest/) page

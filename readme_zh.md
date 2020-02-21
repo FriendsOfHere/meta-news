@@ -7,7 +7,7 @@
 ## 安装说明
 
 ### 一键安装  (推荐)
-👉 <a href="https://jump.here.app/?installPlugin?title=sspai&url=https://github.com/FriendsOfHere/meta-news/releases/latest/download/app.here.meta-news.hereplugin">点击这里 🔌</a>
+👉 <a href="https://jump.here.app/?installPlugin?title=meta-news&url=https://github.com/FriendsOfHere/meta-news/releases/latest/download/app.here.meta-news.hereplugin">点击这里 🔌</a>
 
 ### 手动安装
 1. 打开 [releases](https://github.com/FriendsOfHere/meta-news/releases/latest/) 页面
