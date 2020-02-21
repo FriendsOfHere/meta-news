@@ -86,7 +86,7 @@ sed -i 's/{{pluginIdentifier}}/${pluginIdentifier}/g' ${defaultDestDir}/config.j
 sed -i 's/{{pluginDescription}}/${pluginDescription}/g' ${defaultDestDir}/config.json;
 sed -i 's|{{rssFeedUrl}}|${feedUrl}|g' ${defaultDestDir}/index.js;
 sed -i 's/{{miniDetail}}/${miniDetail}/g' ${defaultDestDir}/index.js;
-zip -r ${defaultDesktop}/${pluginIdentifier}.zip ${defaultDestDir} -x *.DS_Store*;
+zip -rm ${defaultDesktop}/${pluginIdentifier}.zip ${defaultDestDir} -x *.DS_Store*;
 mv ${defaultDesktop}/${pluginIdentifier}.zip ${defaultDesktop}/${pluginIdentifier}.hereplugin;
 `)
                 .then((output) => {
@@ -94,7 +94,10 @@ mv ${defaultDesktop}/${pluginIdentifier}.zip ${defaultDesktop}/${pluginIdentifie
                     //生成成功
                     here.systemNotification(`${pluginName} 生成成功🤗`, `插件已生成至桌面，双击 ${identifier}.hereplugin 安装吧`)
                     //打开到桌面
-                    here.exec('open ~/Desktop', (output) => {console.log(output)})
+                    _.delay(() => {
+                        here.exec('open ~/Desktop', (output) => {console.log(output)})
+                    }, 1000);
+
                 })
             },
             title: "正在生成插件,这里会是标题",
