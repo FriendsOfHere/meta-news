@@ -1,6 +1,6 @@
 {
    "name": "Meta News",
-   "version": "1.0.0",
+   "version": "1.0.1",
    "identifier": "app.here.meta-news",
    "description": "A plugin to generate news plugin",
    "icon": "icon.png",
