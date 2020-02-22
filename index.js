@@ -72,7 +72,7 @@ function updateData() {
         let popOvers = [
             {title: "💖 欢迎关注 FriendsOfHere 🥰",
             onClick: () => {here.openURL("https://github.com/FriendsOfHere")}},
-            {title: feedUrl == DEFAULT_FOH_FEED ? "以下是 FOH 正在维护的项目，欢迎 Star ⭐️" : "以下为预览的新闻内容",
+            {title: feedUrl == DEFAULT_FOH_FEED ? "以下是 FOH 正在维护的项目，欢迎 Star ⭐️" : "↓以下为预览的新闻内容↓",
             onClick: () => {here.openURL("https://github.com/FriendsOfHere")}}
         ]
         popOvers = popOvers.concat(_.map(feed.items, (item, index) => {
