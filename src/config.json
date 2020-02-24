@@ -6,7 +6,7 @@
    "icon": "icon.png",
    "createdBy": "Lifesign",
    "website": "https://github.com/FriendsOfHere/meta-news",
-   "appcast": "https://raw.githubusercontent.com/FriendsOfHere/meta-news/src/appcast.xml",
+   "appcast": "https://raw.githubusercontent.com/FriendsOfHere/meta-news/master/src/appcast.xml",
    "script": "index.js",
    "defaultCategory": "fav",
    "displayOn": ["mini"],
