@@ -9,11 +9,11 @@
 ## Installation
 
 ### One Click  (Recommend)
-👉 <a href="https://jump.here.app/?installPlugin?title=meta-news&url=https://github.com/FriendsOfHere/meta-news/releases/latest/download/app.here.meta-news.hereplugin">Click Here 🔌</a>
+👉 <a href="https://jump.here.app/?installPlugin?title=Meta-News&url=https://github.com/FriendsOfHere/meta-news/releases/latest/download/Meta-News.hereplugin">Click Here 🔌</a>
 
 ### Manually
 1. Go [releases](https://github.com/FriendsOfHere/meta-news/releases/latest/) page
-2. Download the latest release & double click the `app.here.meta-news.hereplugin`
+2. Download the latest release & double click the `Meta-News.hereplugin`
 
 ## Usage
 1. Go Meta-News preferences
