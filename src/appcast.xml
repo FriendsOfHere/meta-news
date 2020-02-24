@@ -4,8 +4,8 @@
     <channel>
         <item>
             <enclosure url="https://github.com/FriendsOfHere/meta-news
-/releases/download/1.0.1/app.here.meta-news
-.hereplugin" sparkle:version="1.0.1"/>
+/releases/download/1.0.2/Meta-News
+.hereplugin" sparkle:version="1.0.2"/>
         </item>
     </channel>
 </rss>
