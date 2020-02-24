@@ -27,7 +27,7 @@
           "title": "* 插件标识(identifier)",
           "type": "text",
           "key": "pluginIdentifier",
-          "default": "app.here.foh.hello-world"
+          "default": "foh.helloworld"
       },
       {
           "title": "插件描述",
