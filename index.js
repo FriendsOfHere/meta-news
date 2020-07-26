@@ -24,27 +24,27 @@ function updateData() {
     let pluginDescription = ""
     let logoPath = ""
 
-    here.setMiniWindow({ title: "Updating…" })
+    here.miniWindow.set({ title: "Updating…" })
 
     const prefs = pref.all()
     if (prefs == undefined) {
-        here.setMiniWindow({ title: "Get Pref Failed..." })
+        here.miniWindow.set({ title: "Get Pref Failed..." })
         return Promise.reject()
     }
 
     if (prefs.feedUrl == undefined || prefs.feedUrl == "") {
         here.systemNotification(`${identifier} 配置错误`, "Feed 地址不能为空")
-        here.setMiniWindow({ title: "Get FeedUrl Failed..." })
+        here.miniWindow.set({ title: "Get FeedUrl Failed..." })
         return Promise.reject()
     }
     if (prefs.pluginName == undefined || prefs.pluginName == "") {
         here.systemNotification(`${identifier} 配置错误`, "插件名不能为空")
-        here.setMiniWindow({ title: "Get PluginName Failed..." })
+        here.miniWindow.set({ title: "Get PluginName Failed..." })
         return Promise.reject()
     }
     if (prefs.pluginIdentifier == undefined || prefs.pluginIdentifier == "") {
         here.systemNotification(`${identifier} 配置错误`, "插件标识不能为空")
-        here.setMiniWindow({ title: "Get PluginIdentifier Failed..." })
+        here.miniWindow.set({ title: "Get PluginIdentifier Failed..." })
         return Promise.reject()
     }
 
@@ -58,7 +58,7 @@ function updateData() {
     here.parseRSSFeed(feedUrl)
     .then((feed) => {
         if (feed.items.length <= 0) {
-            return here.setMiniWindow({ title: "No item found." })
+            return here.miniWindow.set({ title: "No item found." })
         }
 
         if (feed.items.length > LIMIT) {
@@ -83,7 +83,7 @@ function updateData() {
         }))
 
         // Mini Window
-        here.setMiniWindow({
+        here.miniWindow.set({
             onClick: () => {
                 console.log(`
                     ======== Meta Config =======
@@ -128,12 +128,14 @@ mv ${defaultDesktop}/${pluginIdentifier}.zip ${defaultDesktop}/${pluginIdentifie
             },
             title: `👓生成标题预览->${topFeed.title}`,
             detail: "点击此处将在桌面生成插件，移动可查看 popup 效果",
-            popOvers: popOvers
         })
     })
     .catch((error) => {
         console.error("Error: " + JSON.stringify(error))
     })
+
+    //popover
+    here.popover.set(popOvers)
 }
 
 here.onLoad(() => {
