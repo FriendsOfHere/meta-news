@@ -129,13 +129,14 @@ mv ${defaultDesktop}/${pluginIdentifier}.zip ${defaultDesktop}/${pluginIdentifie
             title: `👓生成标题预览->${topFeed.title}`,
             detail: "点击此处将在桌面生成插件，移动可查看 popup 效果",
         })
+
+        //popover
+        here.popover.set(popOvers)
     })
     .catch((error) => {
         console.error("Error: " + JSON.stringify(error))
     })
 
-    //popover
-    here.popover.set(popOvers)
 }
 
 here.onLoad(() => {
